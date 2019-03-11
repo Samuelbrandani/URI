@@ -1,0 +1,17 @@
+import java.io.IOException;
+ import java.util.Scanner;
+
+public class Main {
+ 
+    public static void main(String[] args) throws IOException {
+ 
+		float a, b, t;
+		Scanner ler = new Scanner(System.in);
+		a = ler.nextFloat();
+		b = ler.nextFloat();
+		t = a/b;
+		System.out.printf("%.2f\n", t);
+ 
+    }
+ 
+}
