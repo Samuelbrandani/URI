@@ -1,0 +1,92 @@
+package Main;
+import java.io.IOException;
+import java.util.Scanner;
+public class Main {
+//	1021 uri
+//	As notas consideradas são de 100, 50, 20, 10, 5, 2
+//	As moedas possíveis são de 1, 0.50, 0.25, 0.10, 0.05 e 0.01
+    public static void main(String[] args) throws IOException {
+ 
+		Scanner ler = new Scanner(System.in);
+		float value = ler.nextFloat();
+		int qtd_nota100 = 0, qtd_nota50 = 0, qtd_nota20 = 0, qtd_nota10 = 0, qtd_nota5 = 0, qtd_nota2 = 0;
+		int qtd_moeda1 = 0, qtd_moeda05 = 0, qtd_moeda025 = 0, qtd_moeda010 = 0, qtd_moeda005 = 0, qtd_moeda001 = 0;
+		float resto = 0;
+		String aux = ""+value;
+		String centavos = aux.substring(aux.length() - 3);
+		System.out.println(centavos);
+		
+		
+		value = (int) value;
+		if(value >= 100){
+			qtd_nota100 = (int) (value/100);
+			resto = value % 100;
+		}else{
+			resto = value;
+		}
+		if(resto >= 50){
+			qtd_nota50 = (int) (resto/50);
+			resto = resto % 50;
+		}
+		if(resto >= 20){
+			qtd_nota20 = (int) (resto/20);
+			resto = resto % 20;
+		}
+		if(resto >= 10){
+			qtd_nota10 = (int) (resto/10);
+			resto = resto % 10;
+		}
+		if(resto >= 5){
+			qtd_nota5 = (int) (resto/5);
+			resto = resto % 5;
+		}
+		if(resto >= 2){
+			qtd_nota2 = (int) (resto/2);
+			resto = resto % 2;
+		}
+
+//		if(resto >= 1){
+//			qtd_moeda1 = (int) resto;
+//		}
+//		MOEDAS
+
+//		if(resto >= 0.50){
+//			qtd_moeda025 = (int) (resto/0.50);
+//			resto = (float) (resto % 0.50);
+//		}
+//		if(resto >= 0.25){
+//			qtd_moeda05 = (int) (resto/0.25);
+//			resto = (float) (resto % 0.25);
+//		}
+//		if(resto >= 0.10){
+//			qtd_nota2 = (int) (resto/0.10);
+//			resto = (float) (resto % 0.10);
+//		}
+//		if(resto >= 0.05){
+//			qtd_moeda005 = (int) (resto/0.05);
+//			resto = resto % 2;
+//		}
+//		resto = (int) qtd_moeda001;
+
+		
+		System.out.println("NOTAS"); 
+		System.out.printf("%d nota(s) de R$ 100.00\n", qtd_nota100);
+		System.out.printf("%d nota(s) de R$ 50.00\n", qtd_nota50);
+		System.out.printf("%d nota(s) de R$ 20.00\n", qtd_nota20);
+		System.out.printf("%d nota(s) de R$ 10.00\n", qtd_nota10);
+		System.out.printf("%d nota(s) de R$ 5.00\n", qtd_nota5);
+		System.out.printf("%d nota(s) de R$ 2.00\n", qtd_nota2);
+//		System.out.printf("%f", qtd_nota2);
+//		System.out.println("MOEDAS:");
+//		System.out.printf("%d moeda(s) de R$ 1.00", qtd_moeda1);
+//		System.out.printf("%d moeda(s) de R$ 0.50", qtd_moeda05);
+//		System.out.printf("%d moeda(s) de R$ 0.25", qtd_moeda025);
+//		System.out.printf("%d moeda(s) de R$ 0.10", qtd_moeda010);
+//		System.out.printf("%d moeda(s) de R$ 0.05", qtd_moeda005);
+//		System.out.printf("%d moeda(s) de R$ 0.01", qtd_moeda001);
+
+
+    
+    }
+ 
+}
